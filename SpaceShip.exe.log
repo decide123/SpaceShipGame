@@ -1,0 +1,1321 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: X:\SpaceShip.exe, файл: C:\Users\Лев\Downloads\TX\TXLib.h, строка: 10701, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, эта картинка не загружена, холст не создан или уже уничтожен.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F52B4 (32-bit), Flags: CMdRe0, Thread: 0xE50 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041FBBD in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10701)
+
+# 1 0x00426216 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (151):
+
+    149:     txSetColor    (RGB(255, 255, 255));
+    150:     txCircle      (x, y, 50);*/
+=>  151:     txAlphaBlend(txDC(), x, y, 0, 0, pic);
+    152:     }
+    153: 
+
+# 2 0x00425E1F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (51):
+
+     49:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+     50:         spaceship.physics(DT);
+=>   51:         spaceship.draw();
+     52: 
+     53:         if(spaceship.bounce() == 0)
+
+# 3 0x00425CCA in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (36):
+
+     34:     SpaceShip spaceship{300, 100, 0, 10, 0, 0.3, 100, txLoadImage("pics//lvl1SpaceShixp.bmp")};
+     35: 
+=>   36:     GameProcess(spaceship);
+     37:     txDeleteDC(spaceship.pic);
+     38:     }
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int) at C:\Users\Лев\Downloads\TX\TXLib.h (10701):
+
+  10699:     {
+  10700: $1  _TX_IF_HDC_FAILED (destImage)   return false;
+=>10701: $   _TX_IF_HDC_FAILED (sourceImage) return false;
+  10702: 
+  10703: $   if (width <= 0 || height <= 0)
+
+# 1 in void SpaceShip::draw() at X:\SpaceShip.cpp (151):
+
+    149:     txSetColor    (RGB(255, 255, 255));
+    150:     txCircle      (x, y, 50);*/
+=>  151:     txAlphaBlend(txDC(), x, y, 0, 0, pic);
+    152:     }
+    153: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	Apr 15 2017 21:43:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Apr 15 2017 21:43:51
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: X:\SpaceShip.exe, файл: C:\Users\Лев\Downloads\TX\TXLib.h, строка: 10701, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, эта картинка не загружена, холст не создан или уже уничтожен.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F52B4 (32-bit), Flags: CMdRe0, Thread: 0x1854 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041FBBD in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10701)
+
+# 1 0x00426216 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (151):
+
+    149:     txSetColor    (RGB(255, 255, 255));
+    150:     txCircle      (x, y, 50);*/
+=>  151:     txAlphaBlend(txDC(), x, y, 0, 0, pic);
+    152:     }
+    153: 
+
+# 2 0x00425E1F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (51):
+
+     49:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+     50:         spaceship.physics(DT);
+=>   51:         spaceship.draw();
+     52: 
+     53:         if(spaceship.bounce() == 0)
+
+# 3 0x00425CCA in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (36):
+
+     34:     SpaceShip spaceship{300, 100, 0, 10, 0, 0.3, 100, txLoadImage("pics//lvl1SpaceShixp.bmp")};
+     35: 
+=>   36:     GameProcess(spaceship);
+     37:     txDeleteDC(spaceship.pic);
+     38:     }
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int) at C:\Users\Лев\Downloads\TX\TXLib.h (10701):
+
+  10699:     {
+  10700: $1  _TX_IF_HDC_FAILED (destImage)   return false;
+=>10701: $   _TX_IF_HDC_FAILED (sourceImage) return false;
+  10702: 
+  10703: $   if (width <= 0 || height <= 0)
+
+# 1 in void SpaceShip::draw() at X:\SpaceShip.cpp (151):
+
+    149:     txSetColor    (RGB(255, 255, 255));
+    150:     txCircle      (x, y, 50);*/
+=>  151:     txAlphaBlend(txDC(), x, y, 0, 0, pic);
+    152:     }
+    153: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	Apr 15 2017 21:46:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Apr 15 2017 21:46:10
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: X:\SpaceShip.exe, файл: C:\Users\Лев\Downloads\TX\TXLib.h, строка: 10634, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, DWORD),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, эта картинка не загружена, холст не создан или уже уничтожен.
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004F52B4 (32-bit), Flags: CMdRe0, Thread: 0x187C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041EC99 in X:\SpaceShip.exe: txBitBlt() at C:/Users/Лев/Downloads/TX/TXLib.h (10634)
+# 1 0x0041F128 in X:\SpaceShip.exe: txBitBlt() at C:/Users/Лев/Downloads/TX/TXLib.h (10651)
+
+# 2 0x004263FF in X:\SpaceShip.exe: BackDraw() at X:/SpaceShip.cpp (161):
+
+    159: void BackDraw(HDC background)
+    160:     {
+=>  161:     txBitBlt(0, 0, background);
+    162:     }
+    163: 
+
+# 3 0x00425FBA in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (56):
+
+     54:         spaceship.draw();
+     55: 
+=>   56:         BackDraw(background);
+     57: 
+     58:         if(spaceship.bounce() == 0)
+
+# 4 0x00425E2C in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (38):
+
+     36:     HDC background = txLoadImage("pics//fon2.jpg");
+     37: 
+=>   38:     GameProcess(spaceship, background);
+     39:     txDeleteDC(spaceship.pic);
+     40:     txDeleteDC(background);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, DWORD) at C:\Users\Лев\Downloads\TX\TXLib.h (10634):
+
+  10632:     {
+  10633: $1  _TX_IF_HDC_FAILED (destImage)   return false;
+=>10634: $   _TX_IF_HDC_FAILED (sourceImage) return false;
+  10635: 
+  10636: $   if (width <= 0 || height <= 0)
+
+# 1 in bool {anonymous}::TX::txBitBlt(double, double, HDC, double, double) at C:\Users\Лев\Downloads\TX\TXLib.h (10651):
+
+  10649: inline bool txBitBlt (double xDest, double yDest, HDC sourceImage, double xSource /*= 0*/, double ySource /*= 0*/)
+  10650:     {
+=>10651: $1  return txBitBlt (txDC(), xDest, yDest, 0, 0, sourceImage, xSource, ySource);
+  10652:     }
+  10653: 
+
+# 2 in void BackDraw(HDC) at X:\SpaceShip.cpp (161):
+
+    159: void BackDraw(HDC background)
+    160:     {
+=>  161:     txBitBlt(0, 0, background);
+    162:     }
+    163: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	Apr 16 2017 12:37:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Apr 16 2017 12:37:41
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: X:\SpaceShip.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00420820 в функции txAlphaBlend() в файле C:/Users/Лев/Downloads/TX/TXLib.h на строке 10919. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2BC (32-bit), Flags: CMdRe0, Thread: 0x1ED0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420820 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10919)
+
+# 1 0x00427052 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00426B9F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x0042684E in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int) at C:\Users\Лев\Downloads\TX\TXLib.h (10919):
+
+  10917: $   if (ok)
+  10918:         {
+=>10919: $       ok &= txGDI (!!(Win32::AlphaBlend (destImage,   ROUND (xDest),   ROUND (yDest),   ROUND (width), ROUND (height),
+  10920:                                            sourceImage, ROUND (xSource), ROUND (ySource), ROUND (width), ROUND (height), blend)),
+  10921:                                            destImage);
+
+# 1 in void Character::draw(int) at X:\SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 12:58:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 12:58:06
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует:
+
+Программа: X:\SpaceShip.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00420820 в функции txAlphaBlend() в файле C:/Users/Лев/Downloads/TX/TXLib.h на строке 10919. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2BC (32-bit), Flags: CMdRe0, Thread: 0x1ED0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420820 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10919)
+
+# 1 0x00427052 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00426B9F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x0042684E in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int) at C:\Users\Лев\Downloads\TX\TXLib.h (10919):
+
+  10917: $   if (ok)
+  10918:         {
+=>10919: $       ok &= txGDI (!!(Win32::AlphaBlend (destImage,   ROUND (xDest),   ROUND (yDest),   ROUND (width), ROUND (height),
+  10920:                                            sourceImage, ROUND (xSource), ROUND (ySource), ROUND (width), ROUND (height), blend)),
+  10921:                                            destImage);
+
+# 1 in void Character::draw(int) at X:\SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 12:58:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 12:58:06
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: X:\SpaceShip.exe, файл: C:\Users\Лев\Downloads\TX\TXLib.h, строка: 7618, функция: bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND),
+
+Сообщение: Cannot lock GDI to free resources
+
+#3: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2BC (32-bit), Flags: CMdrE0, Thread: 0x201C (Canvas), errno: 34 (Result too large). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420820 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10919)
+
+# 1 0x00427052 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00426B9F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x0042684E in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND) at C:\Users\Лев\Downloads\TX\TXLib.h (7618):
+
+   7616: $   bool locked = false;
+   7617: $   _txWaitFor ((locked = txLock (false), locked), _TX_TIMEOUT);
+=> 7618: $   if (!locked) TX_DEBUG_ERROR ("Cannot lock GDI to free resources");
+   7619: 
+   7620:     // Освобождаем пользовательские ресурсы
+
+# 1 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7550):
+
+   7548: 
+   7549:         case WM_CLOSE:        $ if (_txCanvas_OnCLOSE      (wnd)) break; else return 0;
+=> 7550:         case WM_DESTROY:      $     _txCanvas_OnDESTROY    (wnd);             return 0;
+   7551: 
+   7552:         case WM_PAINT:        $     _txCanvas_OnPAINT      (wnd);             return 0;
+
+# 2 in unsigned int {anonymous}::TX::_txCanvas_ThreadProc(void*) at C:\Users\Лев\Downloads\TX\TXLib.h (7356):
+
+   7354: $       DispatchMessage  (&msg);
+   7355: 
+=> 7356: $       Sleep (0);
+   7357:         }
+   7358: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 12:58:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 12:58:07
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: X:\SpaceShip.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00420820 в функции txAlphaBlend() в файле C:/Users/Лев/Downloads/TX/TXLib.h на строке 10919. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2BC (32-bit), Flags: CMdRe0, Thread: 0x215C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420820 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10919)
+
+# 1 0x00427052 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00426B9F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x0042684E in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int) at C:\Users\Лев\Downloads\TX\TXLib.h (10919):
+
+  10917: $   static std::map <std::string, unsigned> loadTimes;
+  10918: $   std::string file = filename;
+=>10919: $   unsigned time    = GetTickCount();
+  10920: 
+  10921: $   if ((long) (time - loadTimes [file]) < _TX_TIMEOUT)
+
+# 1 in void Character::draw(int) at X:\SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 12:58:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:01:48
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует:
+
+Программа: X:\SpaceShip.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00420820 в функции txAlphaBlend() в файле C:/Users/Лев/Downloads/TX/TXLib.h на строке 10919. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2BC (32-bit), Flags: CMdRe0, Thread: 0x215C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420820 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10919)
+
+# 1 0x00427052 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00426B9F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x0042684E in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int) at C:\Users\Лев\Downloads\TX\TXLib.h (10919):
+
+  10917: $   static std::map <std::string, unsigned> loadTimes;
+  10918: $   std::string file = filename;
+=>10919: $   unsigned time    = GetTickCount();
+  10920: 
+  10921: $   if ((long) (time - loadTimes [file]) < _TX_TIMEOUT)
+
+# 1 in void Character::draw(int) at X:\SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 12:58:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:01:48
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: X:\SpaceShip.exe, файл: C:\Users\Лев\Downloads\TX\TXLib.h, строка: 7618, функция: bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND),
+
+Сообщение: Cannot lock GDI to free resources
+
+#3: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2BC (32-bit), Flags: CMdrE0, Thread: 0x2274 (Canvas), errno: 34 (Result too large). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420820 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10919)
+
+# 1 0x00427052 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00426B9F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x0042684E in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND) at C:\Users\Лев\Downloads\TX\TXLib.h (7618):
+
+   7616: 
+   7617:     int inTX = _txLocCur.inTX++;
+=> 7618: 
+   7619:     if (_txLocCur.trace) _txTrace (__FILE__, __LINE__, __TX_FUNCTION__, "%*s" "0x%X <- 0x%03X (0x%08X, 0x%08lX)",
+   7620:                                    2 * (_txLocCur.inTX - 1), "", wnd, msg, wpar, lpar);
+
+# 1 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7550):
+
+   7548: 
+   7549: $   if ((_txCanvas_RefreshLock <= 0 || oldCount <= 0) && wnd)
+=> 7550:         { $ RedrawWindow (wnd, NULL, NULL, RDW_INVALIDATE | RDW_INTERNALPAINT | RDW_UPDATENOW); }
+   7551: 
+   7552: $   return oldCount;
+
+# 2 in unsigned int {anonymous}::TX::_txCanvas_ThreadProc(void*) at C:\Users\Лев\Downloads\TX\TXLib.h (7356):
+
+   7354:                 {
+   7355:                 found = true;
+=> 7356:                 break;
+   7357:                 }
+   7358:             }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 12:58:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:01:48
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: X:\SpaceShip.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00420820 в функции txAlphaBlend() в файле C:/Users/Лев/Downloads/TX/TXLib.h на строке 10919. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2BC (32-bit), Flags: CMdRe0, Thread: 0x21D8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420820 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10919)
+
+# 1 0x00427052 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00426B9F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x0042684E in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int) at C:\Users\Лев\Downloads\TX\TXLib.h (10919):
+
+  10917: $   static std::map <std::string, unsigned> loadTimes;
+  10918: $   std::string file = filename;
+=>10919: $   unsigned time    = GetTickCount();
+  10920: 
+  10921: $   if ((long) (time - loadTimes [file]) < _TX_TIMEOUT)
+
+# 1 in void Character::draw(int) at X:\SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 12:58:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:02:26
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует:
+
+Программа: X:\SpaceShip.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00420820 в функции txAlphaBlend() в файле C:/Users/Лев/Downloads/TX/TXLib.h на строке 10919. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2BC (32-bit), Flags: CMdRe0, Thread: 0x21D8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420820 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10919)
+
+# 1 0x00427052 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00426B9F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x0042684E in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double, unsigned int) at C:\Users\Лев\Downloads\TX\TXLib.h (10919):
+
+  10917: $   static std::map <std::string, unsigned> loadTimes;
+  10918: $   std::string file = filename;
+=>10919: $   unsigned time    = GetTickCount();
+  10920: 
+  10921: $   if ((long) (time - loadTimes [file]) < _TX_TIMEOUT)
+
+# 1 in void Character::draw(int) at X:\SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 12:58:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:02:26
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: X:\SpaceShip.exe, файл: C:\Users\Лев\Downloads\TX\TXLib.h, строка: 7618, функция: bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND),
+
+Сообщение: Cannot lock GDI to free resources
+
+#3: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2BC (32-bit), Flags: CMdrE0, Thread: 0x1834 (Canvas), errno: 34 (Result too large). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420820 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (10919)
+
+# 1 0x00427052 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00426B9F in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x0042684E in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND) at C:\Users\Лев\Downloads\TX\TXLib.h (7618):
+
+   7616: 
+   7617:     int inTX = _txLocCur.inTX++;
+=> 7618: 
+   7619:     if (_txLocCur.trace) _txTrace (__FILE__, __LINE__, __TX_FUNCTION__, "%*s" "0x%X <- 0x%03X (0x%08X, 0x%08lX)",
+   7620:                                    2 * (_txLocCur.inTX - 1), "", wnd, msg, wpar, lpar);
+
+# 1 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7550):
+
+   7548: 
+   7549: $   if ((_txCanvas_RefreshLock <= 0 || oldCount <= 0) && wnd)
+=> 7550:         { $ RedrawWindow (wnd, NULL, NULL, RDW_INVALIDATE | RDW_INTERNALPAINT | RDW_UPDATENOW); }
+   7551: 
+   7552: $   return oldCount;
+
+# 2 in unsigned int {anonymous}::TX::_txCanvas_ThreadProc(void*) at C:\Users\Лев\Downloads\TX\TXLib.h (7356):
+
+   7354:                 {
+   7355:                 found = true;
+=> 7356:                 break;
+   7357:                 }
+   7358:             }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 12:58:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:02:26
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: X:\SpaceShip.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00420F94 в функции txAlphaBlend() в файле C:/Users/Лев/Downloads/TX/TXLib.h на строке 11067. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2C0 (32-bit), Flags: CMdRe0, Thread: 0x1C60 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420F94 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (11067)
+
+# 1 0x004277D0 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00427325 in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x00426FD4 in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Лев\Downloads\TX\TXLib.h (11067):
+
+  11065: $   if (ok)
+  11066:         {
+=>11067: $       ok &= txGDI (!!(Win32::AlphaBlend (destImage,   ROUND (xDest),   ROUND (yDest),   ROUND (width), ROUND (height),
+  11068:                                            sourceImage, ROUND (xSource), ROUND (ySource), ROUND (width), ROUND (height), blend)),
+  11069:                                            destImage);
+
+# 1 in void Character::draw(int) at X:\SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 13:02:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:02:56
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: X:\SpaceShip.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00420F94 в функции txAlphaBlend() в файле C:/Users/Лев/Downloads/TX/TXLib.h на строке 11067. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2C0 (32-bit), Flags: CMdRe0, Thread: 0x1C60 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420F94 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (11067)
+
+# 1 0x004277D0 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00427325 in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x00426FD4 in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Лев\Downloads\TX\TXLib.h (11067):
+
+  11065: $   if (ok)
+  11066:         {
+=>11067: $       ok &= txGDI (!!(Win32::AlphaBlend (destImage,   ROUND (xDest),   ROUND (yDest),   ROUND (width), ROUND (height),
+  11068:                                            sourceImage, ROUND (xSource), ROUND (ySource), ROUND (width), ROUND (height), blend)),
+  11069:                                            destImage);
+
+# 1 in void Character::draw(int) at X:\SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 13:02:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:02:56
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: X:\SpaceShip.exe, файл: C:\Users\Лев\Downloads\TX\TXLib.h, строка: 7712, функция: bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND),
+
+Сообщение: Cannot lock GDI to free resources
+
+#3: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2C0 (32-bit), Flags: CMdrE0, Thread: 0x2164 (Canvas), errno: 34 (Result too large). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420F94 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (11067)
+
+# 1 0x004277D0 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00427325 in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x00426FD4 in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND) at C:\Users\Лев\Downloads\TX\TXLib.h (7712):
+
+   7710: $   bool locked = false;
+   7711: $   _txWaitFor ((locked = txLock (false), locked), _TX_TIMEOUT);
+=> 7712: $   if (!locked) TX_DEBUG_ERROR ("Cannot lock GDI to free resources");
+   7713: 
+   7714:     // Освобождаем пользовательские ресурсы
+
+# 1 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7644):
+
+   7642: 
+   7643:         case WM_CLOSE:        $ if (_txCanvas_OnCLOSE      (wnd)) break; else return 0;
+=> 7644:         case WM_DESTROY:      $     _txCanvas_OnDESTROY    (wnd);             return 0;
+   7645: 
+   7646:         case WM_PAINT:        $     _txCanvas_OnPAINT      (wnd);             return 0;
+
+# 2 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7671):
+
+   7669:         }
+   7670: 
+=> 7671: $   return DefWindowProc (wnd, msg, wpar, lpar);
+   7672:     }
+   7673: 
+
+# 3 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7671):
+
+   7669:         }
+   7670: 
+=> 7671: $   return DefWindowProc (wnd, msg, wpar, lpar);
+   7672:     }
+   7673: 
+
+# 4 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7671):
+
+   7669:         }
+   7670: 
+=> 7671: $   return DefWindowProc (wnd, msg, wpar, lpar);
+   7672:     }
+   7673: 
+
+# 5 in unsigned int {anonymous}::TX::_txCanvas_ThreadProc(void*) at C:\Users\Лев\Downloads\TX\TXLib.h (7448):
+
+   7446: 
+   7447: $       TranslateMessage (&msg);
+=> 7448: $       DispatchMessage  (&msg);
+   7449: 
+   7450: $       Sleep (0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 13:02:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:02:57
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: X:\SpaceShip.exe, файл: C:\Users\Лев\Downloads\TX\TXLib.h, строка: 7712, функция: bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND),
+
+Сообщение: Cannot lock GDI to free resources
+
+#4: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FF2C0 (32-bit), Flags: CMdrE0, Thread: 0x2164 (Canvas), errno: 34 (Result too large). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420F94 in X:\SpaceShip.exe: txAlphaBlend() at C:/Users/Лев/Downloads/TX/TXLib.h (11067)
+
+# 1 0x004277D0 in X:\SpaceShip.exe: draw() at X:/SpaceShip.cpp (300):
+
+    298:                                                (t % 9) * 50     = 0 50 100 150 200 250  450                   */
+    299: 
+=>  300:     txAlphaBlend(txDC(), pos.x, pos.y, 50, 50, pic, t%AnimationCLOCK * 50, animation*50, 1);            // Если animation = 0 рисуем обычную ракету
+    301: 
+    302:     $W                                                                                // Если 1 то взрыв
+
+# 2 0x00427325 in X:\SpaceShip.exe: GameProcess() at X:/SpaceShip.cpp (185):
+
+    183:         spaceship.controls(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT);
+    184:         spaceship.physics(DT);
+=>  185:         spaceship.draw(spaceship.t);
+    186: 
+    187:         Clock--;
+
+# 3 0x00426FD4 in X:\SpaceShip.exe: main() at X:/SpaceShip.cpp (119):
+
+    117:     HDC mappic = txLoadImage("pics//BackGroundMap.bmp");
+    118: 
+=>  119:     GameProcess(spaceship, background, mappic);
+    120: 
+    121:     txDeleteDC(mappic);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND) at C:\Users\Лев\Downloads\TX\TXLib.h (7712):
+
+   7710: $   bool locked = false;
+   7711: $   _txWaitFor ((locked = txLock (false), locked), _TX_TIMEOUT);
+=> 7712: $   if (!locked) TX_DEBUG_ERROR ("Cannot lock GDI to free resources");
+   7713: 
+   7714:     // Освобождаем пользовательские ресурсы
+
+# 1 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7644):
+
+   7642: 
+   7643:         case WM_CLOSE:        $ if (_txCanvas_OnCLOSE      (wnd)) break; else return 0;
+=> 7644:         case WM_DESTROY:      $     _txCanvas_OnDESTROY    (wnd);             return 0;
+   7645: 
+   7646:         case WM_PAINT:        $     _txCanvas_OnPAINT      (wnd);             return 0;
+
+# 2 in int {anonymous}::TX::txMessageBox(const char*, const char*, unsigned int) at C:\Users\Лев\Downloads\TX\TXLib.h (10064):
+
+  10062: int txMessageBox (const char text[], const char header[], unsigned flags /*= 0*/)
+  10063:     {
+=>10064: $1  static wchar_t textW   [_TX_BIGBUFSIZE * sizeof (wchar_t)] = L"[NULL text]";
+  10065:     static wchar_t headerW [_TX_BUFSIZE    * sizeof (wchar_t)] = L"[NULL header]";
+  10066: 
+
+# 3 in bool {anonymous}::TX::_txCanvas_OnDESTROY(HWND) at C:\Users\Лев\Downloads\TX\TXLib.h (7712):
+
+   7710: $   bool locked = false;
+   7711: $   _txWaitFor ((locked = txLock (false), locked), _TX_TIMEOUT);
+=> 7712: $   if (!locked) TX_DEBUG_ERROR ("Cannot lock GDI to free resources");
+   7713: 
+   7714:     // Освобождаем пользовательские ресурсы
+
+# 4 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7644):
+
+   7642: 
+   7643:         case WM_CLOSE:        $ if (_txCanvas_OnCLOSE      (wnd)) break; else return 0;
+=> 7644:         case WM_DESTROY:      $     _txCanvas_OnDESTROY    (wnd);             return 0;
+   7645: 
+   7646:         case WM_PAINT:        $     _txCanvas_OnPAINT      (wnd);             return 0;
+
+# 5 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7671):
+
+   7669:         }
+   7670: 
+=> 7671: $   return DefWindowProc (wnd, msg, wpar, lpar);
+   7672:     }
+   7673: 
+
+# 6 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7671):
+
+   7669:         }
+   7670: 
+=> 7671: $   return DefWindowProc (wnd, msg, wpar, lpar);
+   7672:     }
+   7673: 
+
+# 7 in LRESULT {anonymous}::TX::_txCanvas_WndProc(HWND, UINT, WPARAM, LPARAM) at C:\Users\Лев\Downloads\TX\TXLib.h (7671):
+
+   7669:         }
+   7670: 
+=> 7671: $   return DefWindowProc (wnd, msg, wpar, lpar);
+   7672:     }
+   7673: 
+
+# 8 in unsigned int {anonymous}::TX::_txCanvas_ThreadProc(void*) at C:\Users\Лев\Downloads\TX\TXLib.h (7448):
+
+   7446: 
+   7447: $       TranslateMessage (&msg);
+=> 7448: $       DispatchMessage  (&msg);
+   7449: 
+   7450: $       Sleep (0);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 28 2017 13:02:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 28 2017 13:02:56
+
+Run file:	X:\SpaceShip.exe
+Directory:	X:\
+
+--------------------------------------------------

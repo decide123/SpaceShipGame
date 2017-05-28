@@ -1,0 +1,172 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: X:\Untitled1.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75E2D193 в функции wtoi(). Попытка прочесть данные по адресу 0x00000005. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FE2BC (32-bit), Flags: Cmdre0, Thread: 0x194C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75E2D193 in C:\Windows\syswow64\msvcrt.dll: wtoi()
+# 1 0x75E3C5FF in C:\Windows\syswow64\msvcrt.dll: printf()
+
+# 2 0x00426466 in X:\Untitled1.exe: main() at X:/Untitled1.cpp (13):
+
+     11:     int x = 0;
+     12: 
+=>   13:     printf("%s", 5, "abc");
+     14:     return 0;
+     15:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 20 2017 21:13:01, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 20 2017 21:13:03
+
+Run file:	X:\Untitled1.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует:
+
+Программа: X:\Untitled1.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75E2D193 в функции wtoi(). Попытка прочесть данные по адресу 0x00000005. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FE2BC (32-bit), Flags: Cmdre0, Thread: 0x194C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75E2D193 in C:\Windows\syswow64\msvcrt.dll: wtoi()
+# 1 0x75E3C5FF in C:\Windows\syswow64\msvcrt.dll: printf()
+
+# 2 0x00426466 in X:\Untitled1.exe: main() at X:/Untitled1.cpp (13):
+
+     11:     int x = 0;
+     12: 
+=>   13:     printf("%s", 5, "abc");
+     14:     return 0;
+     15:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 20 2017 21:13:01, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 20 2017 21:13:03
+
+Run file:	X:\Untitled1.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: X:\Untitled1.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75E2D193 в функции wtoi(). Попытка прочесть данные по адресу 0x00000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FE2BC (32-bit), Flags: Cmdre0, Thread: 0x1B18 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75E2D193 in C:\Windows\syswow64\msvcrt.dll: wtoi()
+# 1 0x75E3C5FF in C:\Windows\syswow64\msvcrt.dll: printf()
+
+# 2 0x00426466 in X:\Untitled1.exe: main() at X:/Untitled1.cpp (13):
+
+     11:     int x = 0;
+     12: 
+=>   13:     printf("%s", 6, "abc");
+     14:     return 0;
+     15:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 20 2017 21:13:37, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 20 2017 21:13:39
+
+Run file:	X:\Untitled1.exe
+Directory:	X:\
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует:
+
+Программа: X:\Untitled1.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75E2D193 в функции wtoi(). Попытка прочесть данные по адресу 0x00000006. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105], Instance: 0x004FE2BC (32-bit), Flags: Cmdre0, Thread: 0x1B18 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75E2D193 in C:\Windows\syswow64\msvcrt.dll: wtoi()
+# 1 0x75E3C5FF in C:\Windows\syswow64\msvcrt.dll: printf()
+
+# 2 0x00426466 in X:\Untitled1.exe: main() at X:/Untitled1.cpp (13):
+
+     11:     int x = 0;
+     12: 
+=>   13:     printf("%s", 6, "abc");
+     14:     return 0;
+     15:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library) - TXLib [Ver: 00173a, Rev: 105]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Лев\Downloads\TX\TXLib.h
+Compiled:	May 20 2017 21:13:37, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 20 2017 21:13:39
+
+Run file:	X:\Untitled1.exe
+Directory:	X:\
+
+--------------------------------------------------
